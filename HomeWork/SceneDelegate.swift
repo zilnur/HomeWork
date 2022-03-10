@@ -17,9 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: newScene)
         window?.makeKeyAndVisible()
         
-        let vc = ViewController()
-        let naviVC = UINavigationController(rootViewController: vc)
-        window?.rootViewController = naviVC
+        let loginVC = LogInViewController()
+        let loginNaviVC = UINavigationController(rootViewController: loginVC)
+        loginNaviVC.navigationBar.isHidden = true
+        window?.rootViewController = loginNaviVC
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
